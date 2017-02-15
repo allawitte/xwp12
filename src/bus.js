@@ -1,11 +1,12 @@
 'use strict';
 class Bus {
     constructor(){
-        this._isReady = true;
+        this._isReady = false;
     }
 
     takeDriver(driver){
-        return true;
+        this._isReady = true;
+        return this._isReady;
     }
     isReadyForTrip(){
         return this._isReady;
