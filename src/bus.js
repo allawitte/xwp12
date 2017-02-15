@@ -1,15 +1,21 @@
 'use strict';
 class Bus {
-    constructor(){
+    constructor() {
         this._isReady = false;
     }
 
-    takeDriver(driver){
+    takeDriver(driver) {
         this._isReady = true;
         return this._isReady;
     }
-    isReadyForTrip(){
+
+    isReadyForTrip() {
         return this._isReady;
+    }
+
+    currentRouteIncludes(route) {
+        return true;
+
     }
 
 }

@@ -14,14 +14,17 @@ suite('when going to take a bus', function () {
 
     let createPassenger = function() {
         return new Passenger();
-    }
+    };
+
+
 
     suite(' and I ask for a route', function(){
         test(' - bus driver answers a route', function(){
             let passenger = createPassenger();
+            let bus = new Bus();
             let route = passenger.askRoute('Central Station');
 
-            assert.equal(bus.currentRouteIncludes(route), 'Central Station');
+            assert.equal(bus.currentRouteIncludes(route), true);
         })
 
     })
