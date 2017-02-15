@@ -12,6 +12,20 @@ suite('when going to take a bus', function () {
         assert.equal(bus.isReadyForTrip(), true);
     })
 
+    let createPassenger = function() {
+        return new Passenger();
+    }
+
+    suite(' and I ask for a route', function(){
+        test(' - bus driver answers a route', function(){
+            let passenger = createPassenger();
+            let route = passenger.askRoute('Central Station');
+
+            assert.equal(bus.currentRouteIncludes(route), 'Central Station');
+        })
+
+    })
+
 });
 /**
  * Created by HP on 2/15/2017.
