@@ -1,6 +1,15 @@
 'use strict';
 class Bus {
+    constructor(){
+        this._isReady = true;
+    }
 
+    takeDriver(driver){
+        return true;
+    }
+    isReadyForTrip(){
+        return this._isReady;
+    }
 
 }
 module.exports = Bus;
