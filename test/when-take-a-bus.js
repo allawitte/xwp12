@@ -16,16 +16,33 @@ suite('when going to take a bus', function () {
         return new Passenger();
     };
 
+    let createBus = function(){
+        return new Bus();
+    }
+
 
 
     suite(' and I ask for a route', function(){
         test(' - bus driver answers a route', function(){
             let passenger = createPassenger();
-            let bus = new Bus();
+            let bus = createBus();
             let route = passenger.askRoute('Central Station');
 
             assert.equal(bus.currentRouteIncludes(route), true);
         })
+
+
+    })
+
+    suite(' and I ask for a ticket', function(){
+        test(' - bus driver sells me a ticket', function(){
+            let passenger = createPassenger();
+            let bus = createBus();
+            bus.sellTicket(passenger);
+
+            assert.equal(passenger.hasTicket(), true);
+        })
+
 
     })
 
