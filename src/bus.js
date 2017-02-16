@@ -17,6 +17,10 @@ class Bus {
         return true;
 
     }
+    sellTicket(passenger){
+        passenger.ticket = true
+        console.log('passenger.ticket', passenger.ticket);
+    }
 
 }
 module.exports = Bus;

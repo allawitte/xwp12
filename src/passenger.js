@@ -1,17 +1,27 @@
 'use strict';
 class Passenger {
-    constructor(){
+    constructor() {
         this._route = '';
+        this._hasTicket = false;
     }
-    askRoute(route) {
-        this._route = route;
+
+    askRoute(currentRoute) {
+        this._route = currentRoute;
+        return this._route;
+    }
+
+    get route() {
         return this._route;
     }
     
-        get route(){
-            return this._route;
-        }    
-    
+    set ticket(value){
+        this._hasTicket = value;
+    }
+
+    get ticket(){
+        return this._hasTicket;
+    }
+
 }
 
 module.exports = Passenger;
