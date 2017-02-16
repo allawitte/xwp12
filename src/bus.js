@@ -19,7 +19,6 @@ class Bus {
     }
     sellTicket(passenger){
         passenger.ticket = true
-        console.log('passenger.ticket', passenger.ticket);
     }
 
 }
