@@ -40,7 +40,7 @@ suite('when going to take a bus', function () {
             let bus = createBus();
             bus.sellTicket(passenger);
 
-            assert.equal(passenger.ticket, true);
+            assert.equal(passenger.ticket, 'ooo');
         })
 
 
